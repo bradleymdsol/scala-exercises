@@ -1,3 +1,39 @@
+//
+//public class Person implements Washable,  {
+//  private String name;
+//
+//  public Person(String name){
+//    this.name = name;
+//  }
+//
+//  public String getName(){
+//    return name;
+//  }
+//
+//  @Override
+//  public void wash(){
+//    //
+//  }
+//
+//}
+//
+//abstract class Washable {
+//  void wash() {
+//    System.out.print("wash");
+//  }
+//
+//  abstract void useSoap();
+//}
+
+
+
+
+
+
+
+
+
+
 
 abstract class GeometricFigure {
   val name: String
@@ -15,7 +51,7 @@ class Square(side: Double) extends Rectangle(side, side) {
   override val name = "Square"
 }
 
-class Ellipse(verticalAxis: Double, horizontalAxis: Double) extends GeometricFigure with Drawable {
+class Ellipse(verticalAxis: Double, horizontalAxis: Double) extends GeometricFigure with Drawable with Fillable {
   override val name = "Ellipse"
   override def area(): Double = verticalAxis * horizontalAxis * Math.PI
   override def perimeter(): Double = 2 * Math.PI * Math.sqrt((Math.pow(verticalAxis, 2) + Math.pow(horizontalAxis, 2)) / 2)
@@ -51,6 +87,7 @@ trait Fillable extends Drawable {
     super.draw()
     println("Filled")
   }
+  def fill() = {}
 }
 
 
@@ -59,5 +96,15 @@ object Shapes extends App {
   new Square(2).draw()
   new Ellipse(1, 5).draw()
   new Circle(5).draw()
-  (new Triangle(5, 4, 3) with Fillable).draw()
 }
+
+object Shapes2 {
+  def main(args: Array[String]) {
+    new Rectangle(1.2, 2.5).draw()
+    new Square(2).draw()
+    new Ellipse(1, 5).draw()
+    new Circle(5).draw()
+  }
+}
+
+
