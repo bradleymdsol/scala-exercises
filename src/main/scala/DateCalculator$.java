@@ -1,7 +1,3 @@
-import java.time.LocalDate
-
-import scala.io.StdIn
-
 object DateCalculator extends App {
 
   var year = 0

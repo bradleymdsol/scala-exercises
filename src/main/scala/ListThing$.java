@@ -1,6 +1,3 @@
-
-
-
 object ListThing extends App {
   //
   //  val drop : (List[Int], Int) => List[Int] = (l: List[Int], n: Int) => l match {
